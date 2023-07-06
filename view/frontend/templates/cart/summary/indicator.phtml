@@ -1,0 +1,49 @@
+<?php
+/**
+ * Copyright © Chris Mallory All rights reserved.
+ * See COPYING.txt for license details.
+ */
+declare(strict_types=1);
+echo "<style>".$block->getCustomCSS()."</style>";
+?>
+<div class="freeship-section">
+    <?php if (!$block->isOrderEligibleForFreeShipping()): ?>
+        <?php
+        $freeshippingProgress = $block->getFreeShippingCompletionRate();
+        $background = "background: linear-gradient(to right, ".$block->getProgressBarColor()." 0%, ".$block->getProgressBarColor()." "
+            . $freeshippingProgress . "%, ".$block->getProgressBarColor().");";
+        if ($freeshippingProgress > 90) {
+            $background = "background: linear-gradient(to right, ".$block->getProgressBarColor()." 0%, ".$block->getProgressBarColor()." 85%, ".$block->getProgressBarColor()."));";
+        }
+        ?>
+        <div class="freeship-indicator-wrapper">
+            <span class="min"><?= /* @noEscape */ $block->getFormattedPrice(0, 0) ?></span>
+            <div class="freeship-indicator">
+                <div class="freeship-indicator-bg">
+                    <div class="freeship-indicator-fill freeship-indicator-progress"
+                        style="width: <?= /* @noEscape */ $block->getFreeShippingCompletionRate() ?>%;
+                        <?= /* @noEscape */ $background ?>">
+                    </div>
+                </div>
+            </div>
+            <span class="max"><?= /* @noEscape */ $block->getFormattedPrice($block->getFreeShippingMinValue(), 0) ?></span>
+        </div>
+        <p style="<?php echo ("background-color: ".$block->getMessageBackground()."; color: ".$block->getMessageTextColor()."; font-size: ".$block->getFontSize()."px;") ?>" class="message">
+        <?= /* @noEscape */ __($block->getTextMessage().' <span class="freeship-price">%1</span>', 
+            $block->getFormattedPrice($block->getFreeShippingAmountDifference())) ?>
+        </p>
+        <style>
+        .freeship-section p.message:after {
+            border-top: 20px solid <?= /* @noEscape */ __($block->getMessageBackground()) ?>;
+        }
+        .freeship-section .freeship-indicator-wrapper span.min,
+        .freeship-section .freeship-indicator-wrapper span.max {
+            background: <?= /* @noEscape */ __($block->getMessageBackground()) ?>;
+        }
+        </style>
+    <?php else: ?>
+        <div style="<?php echo ("background-color: ".$block->getMessageBackground()) ?>" class="freeship-text">
+            <p style="<?php echo ("color: ".$block->getMessageTextColor()."; font-size: ".$block->getFontSize()."px;") ?>"><?= /* @noEscape */ __($block->getEligibleTextMessage()) ?></p>
+        </div>
+    <?php endif; ?>
+</div>

@@ -1,0 +1,155 @@
+/**
+ * Copyright © Chris Mallory All rights reserved.
+ * See COPYING.txt for license details.
+ */ 
+ 
+.freeship-section {
+	padding: 15px 0;
+	background-color: transparent;
+	border-top: 1px solid #ccc;
+}
+.freeship-section .freeship-text {
+	color: #000;
+	margin-bottom: 0;
+	max-width: 100%;
+}
+.freeship-section .freeship-text p {
+	margin-bottom: 0;
+}
+.freeship-section p.message {
+	text-align: center;
+}
+.freeship-section p .freeship-price {
+	color: red;
+	font-weight: 600;
+}
+.freeship-section .freeship-text {
+    margin-bottom: 0;
+    max-width: 100%;
+    color: #fff;
+    font-weight: 400;
+    font-family: inherit;
+    padding: 5px;
+    background: #ff5501;
+    position: relative;
+    border-radius: 5px;
+}
+.freeship-section p .freeship-bold {
+	font-weight: 600;
+}
+.freeship-section p.message {
+    color: #fff;
+    font-weight: 400;
+    font-family: inherit;
+    padding: 5px 10px;
+    height: 30px;
+    background: #ff5501;
+    position: relative;
+    border-radius: 5px;
+}
+.freeship-section p.message:after {
+    content: "";
+    position: absolute;
+    right: 45%;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transform: rotate(180deg);
+}
+.freeship-section p .freeship-price {
+    color: #fff;
+}
+.freeship-section {
+    margin: auto;
+    text-align: center;
+}
+.freeship-section p.message {
+    margin: auto;
+    width: calc(100% - 30px);
+    display: inline-table;
+    margin-top: 16px;
+    opacity: 0;
+    animation: cssAnimation 2s;
+    animation-fill-mode: forwards;
+	height: auto;
+	padding: 10px;
+}
+.freeship-section .freeship-indicator-wrapper {
+	color: #000;
+}
+.freeship-section .freeship-indicator-wrapper span {
+	display: inline-block;
+}
+.freeship-section .freeship-indicator-wrapper span.min {
+	width: 30px;
+	color: #fff;
+	line-height: 20px;
+	border-radius: 20px;
+}
+.freeship-section .freeship-indicator-wrapper span.max {
+	min-width: 40px;
+	text-align: center;
+	background: #1979c3;
+	color: #fff;
+	line-height: 20px;
+	border-radius: 20px;
+}
+.freeship-section .freeship-indicator-wrapper .freeship-indicator-bg {
+	background-color: rgba(0, 0, 0, 0.1);
+	height: 8px;
+	border-radius: 3px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.freeship-section .freeship-indicator-wrapper .freeship-indicator-fill {
+	height: 8px;
+	display: block;
+	border-radius: 3px;
+	animation-name: shippingProgressBar;
+	animation-duration: 1.25s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+	-webkit-animation: shippingProgressBar 1.25s 1;
+	animation: shippingProgressBar 1.25s 1;
+	transition: width 0.667s cubic-bezier(0.37, 0.16, 0.22, 0.89);
+}
+.freeship-section .freeship-indicator-wrapper .freeship-indicator-progress {
+	background: #00b052;
+}
+.freeship-section .freeship-indicator-wrapper .freeship-indicator {
+	margin: 0 auto;
+	width: calc(100% - 80px);
+	display: inline-block;
+}
+@keyframes cssAnimation {
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes shippingProgressBar {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	to {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes shippingProgressBar {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	to {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
