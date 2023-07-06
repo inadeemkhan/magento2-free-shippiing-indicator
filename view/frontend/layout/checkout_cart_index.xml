@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Chris Mallory All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Nadeem_FreeShippingIndicator::css/_styles.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <referenceContainer name="cart.summary">
+            <block name="checkout.cart.freeshipping.indicator"
+                   before="checkout.cart.shipping"
+                   template="Nadeem_FreeShippingIndicator::cart/summary/indicator.phtml"
+                   ifconfig="free_shipping_indicator/general/is_enable"
+                   class="Nadeem\FreeShippingIndicator\Block\Cart\Indicator">
+            </block>
+        </referenceContainer>
+    </body>
+</page>
