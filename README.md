@@ -1,70 +1,66 @@
-# Magento2 Extension Nadeem FreeShippingIndicator
-Magento2 extension to show an indicator for free shipping on the cart page. | Nadeem Khan
+# Magento 2 Extension — Free Shipping Indicator  
 
-# Installation Instruction
+![Magento](https://img.shields.io/badge/Magento-2.x-orange?logo=magento)  
+![PHP](https://img.shields.io/badge/PHP-7.x-blue?logo=php)  
+![License](https://img.shields.io/badge/License-MIT-green)  
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen)  
 
-* Copy the content of the repo to the <b>{root folder}/app/code/Nadeem/FreeShippingIndicator/</b> folder
-* Run command: <b>php bin/magento setup:upgrade</b>
-* Run Command: <b>php bin/magento setup:static-content:deploy</b>
-* Now Flush Cache: <b>php bin/magento cache:flush</b>
+**Author:** Nadeem Khan  
 
-# Contribution
+This Magento 2 extension adds a visual indicator on the cart page to inform customers how close they are to qualifying for free shipping. This helps improve the shopping experience and can encourage customers to increase their cart value.  
 
-Want to contribute to this extension? The quickest way is to <a href="https://help.github.com/articles/about-pull-requests/">open a pull request</a> on GitHub.
+---
 
-# Screenshots & Support
+## Installation  
 
-If you encounter any problems or bugs, please <a href="https://github.com/inadeemkhan/magento2-free-shippiing-indicator/issues">open an issue</a> on GitHub.
+1. Copy the contents of this repository into:  
+   ```bash
+   {MAGENTO_ROOT}/app/code/Nadeem/FreeShippingIndicator/
+   ```
+2. Run the following commands in your Magento root directory:  
+   ```bash
+   php bin/magento setup:upgrade
+   php bin/magento setup:static-content:deploy
+   php bin/magento cache:flush
+   ```
 
-<b>Checkout Cart Page</b>
+---
 
-![ScreenShot](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-1.png)
+## Screenshots  
 
-<b>Indicator Configuration </b>
+**Cart Page Indicator**  
+![Cart Page](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-1.png)  
 
-![ScreenShot](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-2.png)
+**Configuration Settings**  
+![Configuration](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-2.png)  
 
-<b>Indicator Customization</b>
+**Customization Options**  
+![Customization](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-3.png)  
 
-![ScreenShot](https://github.com/inadeemkhan/magento2-images/blob/master/Free_Shipping_Indicator/FS-3.png)
+---
 
-## Prerequisites
+## Prerequisites  
 
-### Use the following table to verify you have the correct prerequisites to install this Extension.
-<table>
-	<tbody>
-		<tr>
-			<th>Prerequisite</th>
-			<th>How to check</th>
-			<th>For more information</th>
-		</tr>
-	<tr>
-		<td>Apache 2.2 or 2.4</td>
-		<td>Ubuntu: <code>apache2 -v</code><br>
-		CentOS: <code>httpd -v</code></td>
-		<td><a href="https://devdocs.magento.com/guides/v2.2/install-gde/prereq/apache.html">Apache</a></td>
-	</tr>
-	<tr>
-		<td>PHP 7.*.*</td>
-		<td><code>php -v</code></td>
-		<td><a href="http://devdocs.magento.com/guides/v2.2/install-gde/prereq/php-ubuntu.html">PHP Ubuntu</a><br><a href="http://devdocs.magento.com/guides/v2.2/install-gde/prereq/php-centos.html">PHP CentOS</a></td>
-	</tr>
-	<tr><td>MySQL 5.6.x</td>
-	<td><code>mysql -u [root user name] -p</code></td>
-	<td><a href="http://devdocs.magento.com/guides/v2.2/install-gde/prereq/mysql.html">MySQL</a></td>
-	</tr>
-</tbody>
-</table>
+Ensure the following requirements are met before installing this extension:  
 
-### Feedback and Support 
+| Prerequisite | How to Check | Documentation |
+|--------------|--------------|---------------|
+| Apache 2.2 / 2.4 | `apache2 -v` (Ubuntu)<br>`httpd -v` (CentOS) | [Apache Docs](https://devdocs.magento.com/guides/v2.2/install-gde/prereq/apache.html) |
+| PHP 7.x.x | `php -v` | [PHP on Ubuntu](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/php-ubuntu.html)<br>[PHP on CentOS](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/php-centos.html) |
+| MySQL 5.6.x | `mysql -u [root username] -p` | [MySQL Docs](http://devdocs.magento.com/guides/v2.2/install-gde/prereq/mysql.html) |
 
-<a href="mailto:khannadeem243@gmail.com">khannadeem243@gmail.com</a>
+---
 
+## Contribution  
 
+Contributions are welcome!  
+The fastest way to contribute is by submitting a [pull request](https://help.github.com/articles/about-pull-requests/) on GitHub.  
 
+---
 
+## Issues & Support  
 
-## Attributes
+If you encounter any issues or bugs, please [open an issue](https://github.com/inadeemkhan/magento2-free-shippiing-indicator/issues) on GitHub.  
 
-
-
+For direct support or feedback, feel free to contact:  
+📧 [khannadeem243@gmail.com](mailto:khannadeem243@gmail.com)  
